@@ -1,0 +1,241 @@
+@import './../../../abstracts/variables.scss';
+@import './../../../abstracts/mixins.scss';
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url(./../../../assets/fonts/SFProDisplay-Medium.woff);
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.pickupContainer {
+
+}
+
+
+
+.pickupSearchRadioContainer {
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pickupSearch {
+    width: 313px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.pickupSearchShop {
+    margin-left: 45px;
+    padding-right: 15px;
+    color: #2F3035;
+    @include text-edit('SF Pro Display', 400, 1.062rem, 1.193);
+    opacity: 0.7;
+}
+
+.pickupSearch input {
+    height: 33px;
+    width: 313px;
+    border-radius: 3px;
+    padding-left: 15px;
+    padding-right: 35px;
+}
+
+.pickupSearch button {
+    position: absolute;
+    top: 6px;
+    right: -120px;
+    cursor: pointer;
+    background: transparent;
+}
+
+.radioPickup {
+    margin-right: 120px;
+    display: flex;
+
+}
+
+.radioPickupOne, .radioPickupTwo{
+    padding-right: 50px;
+    padding-left: 15px;
+    color: #2F3035;
+    @include text-edit('SF Pro Display', 400, 1.062rem, 1.193);
+    opacity: 0.7;
+}
+
+.radioPickupTwo:last-child {
+    padding-right: 0;
+}
+
+.radioPickup input[type=radio] {
+    padding: 0.4em;
+    -webkit-appearance: none;
+    outline: 1px solid #1C62CD;
+    outline-offset: 0.1em;
+}
+
+.radioPickup input[type=radio]:checked {
+    display: inline-block;
+    background-color: #1C62CD;
+}
+
+.pickupInfoBuyInner {
+    margin-left: 45px;
+}
+
+.pickupInfoBuyGrid {
+    display: grid;
+    grid-auto-rows: 100px;
+    grid-template-columns: 300px 240px 210px 240px auto;
+}
+
+.pickupSubGrid {
+    display: grid;
+    grid-template-columns: 0.3fr 0.5fr;
+    grid-auto-rows: 30px;
+}
+
+.pickupInfoBuyTitlle {
+    color: #2F3035;
+    @include text-edit('SF Pro Display', 400, 1.25rem, 1.193);
+}
+
+.pickupInfoBuyShopAddress {
+    width: 219px;
+    color: #2F3035;
+    @include text-edit('SF Pro Display', 400, 1rem, 1.5);
+    opacity: 0.7;
+}
+
+.pickupInfoBuyText {
+    color: #2F3035;
+    @include text-edit('SF Pro Display', 400, 1rem, 1);
+    opacity: 0.7;
+}
+
+.pickupBuy {
+    width: 140px;
+    height: 35px;
+    border-radius: 3px;
+    color: #FFFFFF;
+    background-color: #1C62CD;
+}
+
+@media screen and (max-width:1400px){
+    .pickupInfoBuyInner {
+        margin: 0 20px;
+    }
+    
+}
+
+@media screen and (max-width:1200px){
+    .pickupInfoBuyGrid{
+        grid-template-columns: 260px 220px 165px 150px auto;
+    }
+}
+
+@media screen and (max-width:1050px) {
+    .pickupSearchRadioContainer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .pickupSearch {
+        color: chocolate;
+        display: block;
+    }
+    .pickupSearchShop {
+        position: relative;
+        top: -20px;
+        right: 30px;
+    }
+    .pickupSearchInput {
+        margin-left: 10px;
+    }
+    .pickupSearch button {
+        top: 28px;
+        right: 10px;
+    }
+    .radioPickup {
+        margin-top: 20px;
+        flex-direction: column;
+    }
+    .radioPickupMobile {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-bottom: 20px;
+        justify-content: space-between;
+        min-width: 330px;
+        border-bottom: 0.5px solid #C4C4C4;
+        padding-bottom: 5px;
+    }
+    .radioPickupMobile:last-child {
+        margin-bottom: 0;
+    }
+    .radioPickup input[type=radio] {
+        height: 5px;
+        margin-top: 5px;
+        margin-left: 16px;
+
+    }
+
+}
+
+
+@media screen and (max-width:992px){
+    .pickupInfoBuyGrid{
+        grid-template-columns: 190px 185px 125px 110px auto;
+    }
+    .pickupBuy{
+        width: 95px;
+    }
+}
+
+@media screen and (max-width:768px){
+    .pickupInfoBuyShopAddress {
+        width: 110px;
+        color: #2F3035;
+        @include text-edit('SF Pro Display', 400, 1rem, 1.5);
+        opacity: 0.7;
+    }
+    .pickupSubGrid {
+        display: grid;
+        grid-template-columns: 0.3fr 0.5fr;
+        grid-auto-rows: 40px;
+    }
+
+    .pickupInfoBuyGrid{
+        grid-template-columns: 110px 130px 125px 90px auto;
+        justify-items: center;
+    }
+
+    .pickupInfoBuyTitlle {
+        @include text-edit('SF Pro Display', 400, 1.10rem, 1.193);
+    }
+    .pickupBuy{
+        width: 70px;
+        font-size: .7rem;
+    }
+}
+
+@media screen and (max-width:576px){
+    .pickupInfoBuyGrid{
+        overflow-x: scroll;
+    }
+
+    .radioPickupMobile {
+        min-width: 300px;
+    }
+
+    .pickupSearch input {
+        width: 300px;
+    }
+}
+
+
+
+

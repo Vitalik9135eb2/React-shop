@@ -1,0 +1,128 @@
+@import './../../../../abstracts/variables.scss';
+@import './../../../../abstracts/mixins.scss';
+
+@font-face {
+    font-family: 'Barlow';
+    src: url(./../../../../assets/fonts/Barlow-Bold.woff);
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Barlow';
+    src: url(./../../../../assets/fonts/Barlow-Regular.woff);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url(./../../../../assets/fonts/SFProDisplay-Bold.woff);
+    font-weight: 700;
+    font-style: normal;
+}
+
+.stock {
+    height: 397px;
+    width: 265px;
+    border: 1px solid $lightGrey;
+    display: block;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
+        border-radius: 3px;
+        transform: scale(1.01);
+    }
+}
+
+.stockPrice {
+    margin-right: 10px;
+
+    @include text-edit ('Barlow', 700, 1.685rem, 1.18);
+
+    font-style: normal;
+    text-align: left;
+
+    color: $accentColor;
+}
+
+.stockPriceNormal {
+    margin: 5px 5px 0 0;
+
+    @include text-edit('Barlow', 400, 0.875rem, 1.2);
+
+    color: $lightGrey;
+
+    position: relative;
+
+    &::after {
+        content: " ₽";
+    }
+
+    &::before {
+        content: "";
+        width: 60px;
+        height: 1px;
+        background-color: rgba(196, 196, 196, 1);
+        display: block;
+        transform: rotate(-13deg);
+        position: absolute;
+        top: 7px;
+        left: -4px;
+    }
+}
+
+.stockPriceNormalWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: -35px;
+}
+
+.stockPrice::after {
+    content: " ₽";
+}
+
+
+.stockImgItemWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & h2 {
+        max-width: 190px;
+
+        margin-top: 10px;
+
+        @include text-edit('SF Pro Display', 700, 1.125rem, 1.17);
+
+        text-align: center;
+    }
+}
+
+.stockTimeAction {
+    height: 112px;
+    width: 262px;
+
+    margin-top: 10px;
+
+    background-color: $baseColor;
+
+    @include flex-edit(center, center);
+    flex-direction: column;
+
+    @include text-edit('SF Pro Display', 400, 1.125rem, 1.17);
+
+    & span {
+        @include text-edit('Barlow', 700, 1.125rem, 1.2);
+        color: $accentColor;
+    }
+}
+
+@media (max-width:1200px) {
+    .stock {
+        margin-top: 40px;
+    }
+}

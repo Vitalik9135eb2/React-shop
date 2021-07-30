@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AAGA,UAAU;EACP,WAAW,EAAE,gBAAgB;EAC7B,GAAG,EAAE,mDAAmD;EACxD,WAAW,EAAE,GAAG;EAChB,UAAU,EAAE,MAAM;;;AAGrB,AAAA,MAAM,CAAC;EACJ,MAAM,EAAE,aAAa;CACvB;;AAED,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,MAAM;EACjC,AAAA,MAAM,CAAC;IACJ,MAAM,EAAE,aAAa;GACvB",
+    "sources": [
+        "Goods.module.scss",
+        "../../abstracts/variables.scss",
+        "../../abstracts/mixins.scss"
+    ],
+    "names": [],
+    "file": "Goods.module.css"
+}

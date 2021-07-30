@@ -1,0 +1,37 @@
+.label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.radio {
+  display: none;
+}
+
+.fake {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: solid 1px #C4C4C4;
+  border-radius: 3px;
+  position: relative;
+  margin-right: 5px;
+}
+
+.fake::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: #1C62CD;
+  border-radius: 3px;
+  top: 2%;
+  left: 2%;
+  opacity: 0;
+}
+
+.radio:checked + .fake::before {
+  opacity: 1;
+}
+/*# sourceMappingURL=FilterRadio.module.css.map */

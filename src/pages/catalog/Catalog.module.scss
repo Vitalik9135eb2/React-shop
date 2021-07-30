@@ -1,0 +1,30 @@
+.CatalogContainer{
+    display: flex;
+    margin-top: 55px;
+    justify-content: center;
+}
+
+.cardCatalogContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 270px) ;
+    grid-auto-rows: 410px;
+    gap: 30px;
+}
+
+.cardCatalogPaginationInner {
+    padding: 70px 0 100px;
+}
+
+@media screen and (max-width:1170px) {
+    .cardCatalogContainer {
+        grid-template-columns: 270px 270px;
+        grid-auto-rows: 410px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .cardCatalogContainer {
+        grid-template-columns: 270px;
+        //grid-auto-flow: dense;
+    }
+}

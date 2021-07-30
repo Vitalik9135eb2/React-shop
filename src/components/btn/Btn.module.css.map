@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,IAAI,CAAC;EACF,MAAM,EAAE,IAAI;EACZ,cAAc,EAAE,GAAG;EACnB,gBAAgB,ECHN,OAAO;EDIjB,KAAK,EAAE,IAAI;CAGb",
+    "sources": [
+        "Btn.module.scss",
+        "../../abstracts/variables.scss"
+    ],
+    "names": [],
+    "file": "Btn.module.css"
+}

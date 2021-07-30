@@ -1,0 +1,95 @@
+@import './../../../abstracts/mixins.scss';
+
+@font-face {
+   font-family: 'Barlow';
+   src: url('./../../../assets/fonts/Barlow-Bold.woff');
+   font-weight: 700;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'SF Pro Display';
+   src: url('./../../../assets/fonts/SFProDisplay-Medium.woff');
+   font-weight: 500;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'SF Pro Display';
+   src: url('./../../../assets/fonts/SFProDisplay-Bold.woff');
+   font-weight: 700;
+   font-style: normal;
+}
+
+
+.goodsHeader {
+
+   .goodsTitle {
+      padding-bottom: 30px;
+
+      @include text-edit ('SF Pro Display'gt, 700, 1.5625rem, 1.2);
+   }
+
+   .goodsMenu {
+      padding-bottom: 35px;
+
+      display: flex;
+   }
+
+   .goodsMenuItem {
+      margin-right: 50px;
+      transition: all 0.3s ease;
+
+      &:hover {
+         transform: scaleX(1.2);
+
+      }
+   }
+
+   .goodsMenuItem:last-child {
+      padding-right: 0;
+   }
+}
+
+.goodsMenuLink {
+   @include text-edit ('SF Pro Display', 500, 0.9375rem, 1.2);
+
+   text-align: center;
+}
+
+
+
+@media screen and (max-width:1200px) {
+   .goodsHeader {
+      .goodsMenu {
+         overflow-x: scroll;
+      }
+   }
+
+   .goodsTitle {
+      text-align: center;
+      padding-bottom: 15px;
+
+   }
+
+   .goodsMenuItem {
+      margin-right: 40px;
+   }
+
+   .goodsMenuItem:first-child {
+      margin-left: 5px;
+   }
+
+   .goodsMenuLink {
+      font-size: 1.4rem;
+   }
+
+}
+
+
+@media screen and (max-width:768px){
+   .goodsMenu{
+      margin-left: 20px;
+   }
+   
+}

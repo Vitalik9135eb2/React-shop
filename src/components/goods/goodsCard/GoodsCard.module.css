@@ -1,0 +1,104 @@
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url(./../../../assets/fonts/SFProDisplay-Medium.woff);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url(./../../../assets/fonts/SFProDisplay-Bold.woff);
+  font-weight: 700;
+  font-style: normal;
+}
+
+.sliderCard {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.sliderCard:hover .showProduct {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.sliderCard .goodsImg {
+  display: block;
+  margin: 0 auto;
+}
+
+.sliderCard .goodsDiscr {
+  margin: 5px auto 25px auto;
+  max-width: 190px;
+  font-family: "SF Pro Display";
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.sliderCard .goodsPrice {
+  font-family: "SF Pro Display";
+  font-weight: 700;
+  font-size: 1.875rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.sliderCard .saleIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.sliderCard .getFavorite {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.sliderCard .bottomBtn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.sliderCard .favoriteInput {
+  width: 1px;
+  height: 1px;
+  visibility: hidden;
+}
+
+.sliderCard .showProduct {
+  width: 230px;
+  height: 61px;
+  position: absolute;
+  top: 105px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-family: "SF Pro Display";
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  font-style: normal;
+  text-align: center;
+  background-color: white;
+  opacity: 0;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .goodsPrice {
+    max-width: 150px;
+  }
+  .sliderCard .bottomBtn {
+    bottom: 38px;
+  }
+}
+/*# sourceMappingURL=GoodsCard.module.css.map */

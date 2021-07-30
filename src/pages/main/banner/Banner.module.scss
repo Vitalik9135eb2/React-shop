@@ -1,0 +1,27 @@
+.wrapper {
+   margin-top: 80px;
+
+   display: flex;
+   justify-content: space-between;
+}
+
+.sliderBanner {
+   flex: 0 1 74%;
+}
+
+
+
+@media (max-width:1200px) {
+   .wrapper {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 60px 0 0 0;
+   }
+
+   .sliderBanner {
+      flex: 0 1 auto;
+   }
+
+
+}

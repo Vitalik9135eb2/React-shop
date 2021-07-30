@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'Barlow';
+  src: url("./../../../assets/fonts/Barlow-Bold.woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url("./../../../assets/fonts/SFProDisplay-Medium.woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url("./../../../assets/fonts/SFProDisplay-Bold.woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+.goodsHeader .goodsTitle {
+  padding-bottom: 30px;
+  font-family: "SF Pro Display" gt;
+  font-weight: 700;
+  font-size: 1.5625rem;
+  line-height: 1.2;
+}
+
+.goodsHeader .goodsMenu {
+  padding-bottom: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.goodsHeader .goodsMenuItem {
+  margin-right: 50px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.goodsHeader .goodsMenuItem:hover {
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
+}
+
+.goodsHeader .goodsMenuItem:last-child {
+  padding-right: 0;
+}
+
+.goodsMenuLink {
+  font-family: "SF Pro Display";
+  font-weight: 500;
+  font-size: 0.9375rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .goodsHeader .goodsMenu {
+    overflow-x: scroll;
+  }
+  .goodsTitle {
+    text-align: center;
+    padding-bottom: 15px;
+  }
+  .goodsMenuItem {
+    margin-right: 40px;
+  }
+  .goodsMenuItem:first-child {
+    margin-left: 5px;
+  }
+  .goodsMenuLink {
+    font-size: 1.4rem;
+  }
+}
+/*# sourceMappingURL=BlockHeader.module.css.map */

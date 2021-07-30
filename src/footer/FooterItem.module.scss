@@ -1,0 +1,118 @@
+@import "./../abstracts/variables.scss";
+
+a {
+   text-decoration: none;
+}
+
+.footerItem {
+
+   margin-right: 100px;
+}
+
+.titleWrap{
+   display: flex;
+   margin: 40px 0 7px 0;
+}
+.title {
+   margin-right: 10px;
+}
+
+
+
+.itemLink {
+   color: $textColor
+}
+
+/***********Accordion*******/
+.input{
+   
+   top: 0;
+   left: 0;
+   opacity: 0;
+   display: block;
+   transition: 2s;
+}
+.input:checked ~.titleWrap{
+   border-bottom: none;
+   
+}
+.input:checked ~.titleWrap::before{
+   border-bottom: none;
+   transform: rotate(180deg);
+}
+
+/***********Accordion  END*******/
+
+@media (max-width: 1199.98px) { 
+
+   .footerItem {
+
+      margin-right: 70px;
+   }
+
+   .item{
+      margin-top: 5px;
+   }
+   .list{
+      margin-left: 10px;
+   }
+}
+
+
+@media (max-width: 1000px){
+   .footerItem{
+      margin-right: 40px;
+   }
+}   
+
+@media (max-width: 850px){
+   .footerItem{
+      margin: 0;
+      width: 100%;
+   }
+
+   .titleWrap{
+      justify-content: center;
+      padding: 10px 0;
+      border-top: solid 1px black;
+      border-bottom: solid 1px black;
+      position: relative;
+      &::before{
+         content: "";
+         position: absolute;
+         top: 50%;
+         right: 175px;
+         background-image: url("./../assets/image/arrow/Back.svg");
+         background-repeat: no-repeat;
+         background-size: 100%;
+         width: 12px;
+         height: 10px;
+      }
+   }
+
+
+   .list{
+      display: none;
+        
+   }
+
+   .input:checked ~ .list{
+      display: block;
+      
+   }
+   
+}
+
+@media (max-width: 575.98px) {
+   .titleWrap{
+      justify-content: space-between;
+           
+   }
+   .title{
+      margin: 0 0 0 20px;
+   }
+   .titleWrap::before{
+      
+      left: 185px;
+   }
+}

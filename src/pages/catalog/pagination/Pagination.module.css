@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Barlow';
+  src: url(./../../../assets/fonts/Barlow-Bold.woff);
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pagination {
+  font-family: "Barlow";
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.2;
+  background: white;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pagination a {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  color: blue;
+}
+
+.pagination a:hover:not(.active) {
+  border: 2px solid #1C62CD;
+}
+/*# sourceMappingURL=Pagination.module.css.map */

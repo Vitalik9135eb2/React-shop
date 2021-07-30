@@ -1,0 +1,69 @@
+@import './../../../abstracts/variables.scss ';
+@import './../../../abstracts/mixins.scss ';
+
+
+.productSlider {
+
+
+   .swiper-pagination-bullets,
+   .swiper-pagination-bullet {
+      visibility: hidden;
+   }
+
+   .swiper-conteiner {
+      width: 1170px;
+   }
+
+   .swiper-wrapper {
+      .swiper-slide {
+         width: 271px;
+         height: 403px;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+
+         justify-content: center;
+         transition: all 0.3s ease;
+
+         cursor: pointer;
+         // margin: 0 40px;
+
+         &:hover {
+            box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
+            border-radius: 3px;
+
+         }
+
+
+
+
+         .goodsDiscr {
+            text-align: center;
+         }
+
+      }
+   }
+
+   .swiper-button-prev,
+   .swiper-button-next {
+      color: $textColor;
+   }
+}
+
+@media screen and (max-width:768px) {
+   .productSlider {
+      .swiper-wrapper {
+         transform: translate3d(-644px, 0px, 0px);
+      }
+
+      .swiper-pagination-bullets,
+      .swiper-pagination-bullet {
+         visibility: visible;
+      }
+
+
+      .swiper-pagination-bullets {
+         bottom: 16px;
+      }
+   }
+}

@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url("./../../assets/fonts/SFProDisplay-Regular.woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.btnShow {
+  margin: 35px auto;
+  height: 50px;
+  width: 252px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #F0F0F4;
+  font-family: "SF Pro Display";
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.2;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #2F3035;
+}
+
+.btnShow:hover {
+  -webkit-box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
+          box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
+  border-radius: 3px;
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+/*# sourceMappingURL=BtnShow.module.css.map */

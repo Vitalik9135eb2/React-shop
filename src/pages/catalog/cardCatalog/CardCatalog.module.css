@@ -1,0 +1,103 @@
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url(./../../../assets/fonts/SFProDisplay-Medium.woff);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url(./../../../assets/fonts/Barlow-Bold.woff);
+  font-weight: 700;
+  font-style: normal;
+}
+
+.cardCatalog {
+  height: 397px;
+  width: 265px;
+  border: 1px solid #C4C4C4;
+  display: block;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.cardCatalog:hover {
+  -webkit-box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
+          box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
+  border-radius: 3px;
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+.cardCatalog:hover .showProduct {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.buttonFavorit {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+.buttonFavorit img {
+  display: block;
+  background-color: #fff;
+}
+
+.buttonCart {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 60px;
+  height: 40px;
+  border-radius: 10px 0 0 0;
+  background-color: #1C62CD;
+}
+
+.titleCardCatalog {
+  font-family: "SF Pro Display";
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.193;
+  text-align: center;
+  padding-top: 25px;
+}
+
+.costCardCatalog {
+  font-family: "Barlow";
+  font-weight: 700;
+  font-size: 1.875rem;
+  line-height: 1.2;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.cardCatalogInner {
+  margin-top: 20px;
+}
+
+.showProduct {
+  width: 230px;
+  height: 61px;
+  position: absolute;
+  top: 105px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-family: "SF Pro Display";
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  font-style: normal;
+  text-align: center;
+  background-color: white;
+  opacity: 0;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+/*# sourceMappingURL=CardCatalog.module.css.map */

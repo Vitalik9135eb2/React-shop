@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,KAAK,CAAA;EACF,OAAO,EAAE,YAAY;EACrB,WAAW,EAAE,GAAG;CAClB",
+    "sources": [
+        "FilterCheckbox.module.scss"
+    ],
+    "names": [],
+    "file": "FilterCheckbox.module.css"
+}

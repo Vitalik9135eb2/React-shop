@@ -1,0 +1,20 @@
+.pointerPageSpan {
+  position: relative;
+  color: #C4C4C4;
+  margin: 10px 25px 0 0;
+}
+
+.pointerPageSpan::after {
+  content: "";
+  position: absolute;
+  background: url("./../../assets/image/pointerPage/Back.svg") center/cover no-repeat;
+  top: 25%;
+  right: -17px;
+  width: 7px;
+  height: 11px;
+}
+
+.pointerPageSpan:last-child::after {
+  content: none;
+}
+/*# sourceMappingURL=PointerPageSpan.module.css.map */

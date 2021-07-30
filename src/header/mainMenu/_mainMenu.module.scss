@@ -1,0 +1,49 @@
+@import './../../abstracts/mixins.scss';
+@import './../../abstracts/variables.scss';
+
+@font-face {
+   font-family: 'SF Pro Display';
+   src: url(./../../assets/fonts/SFProDisplay-Regular.woff);
+   font-weight: 400;
+   font-style: normal;
+}
+
+
+
+.menu {
+   margin-top: 46px;
+
+   background-color: $baseColor;
+}
+
+.list {
+   padding: 15px 0;
+
+   @include flex-edit (space-between, center);
+
+   text-align: center;
+}
+
+.menuItem {
+   transition: all 0.3s ease;
+
+   &:hover {
+      transform: scaleX(1.1);
+
+   }
+}
+
+.menuLink {
+   @include text-edit ('SF Pro Display', 400, 1.25rem, 1.2);
+
+   letter-spacing: 0em;
+   font-style: normal;
+   text-align: left;
+}
+
+@media screen and (max-width:1200px) {
+   .menu {
+      display: none;
+   }
+
+}

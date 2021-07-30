@@ -1,0 +1,118 @@
+.blokInfo {
+  width: 100%;
+}
+
+.LinkWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+}
+
+.title {
+  font-size: 30px;
+  margin: 40px 0 0 0;
+}
+
+.blokInfoFilter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 25px 0 0 0;
+}
+
+.FliterLeft {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.FliterLink {
+  display: block;
+  background: #F0F0F4;
+  margin: 0 10px 0 0;
+  cursor: pointer;
+  padding: 5px 25px;
+  border-radius: 3px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+.FliterLink:nth-last-child(1) {
+  margin: 0;
+}
+
+.FliterLink:nth-child(2) {
+  min-width: 110px;
+}
+
+.blokInfoFliterRight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Select {
+  border: 2px solid #F0F0F4;
+  font-size: 14px;
+  padding: 10px 20px;
+  margin-right: 35px;
+}
+
+.InfoBurgers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.BurgerLeft {
+  margin-right: 10px;
+}
+
+@media (max-width: 1199.98px) {
+  .blokInfo {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 835.98px) {
+  .blokInfo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 40px;
+  }
+  .blokInfoFilter {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .FliterLeft {
+    margin-top: 20px;
+  }
+  .title {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 535.98px) {
+  .FliterLeft {
+    overflow-x: scroll;
+  }
+  .title {
+    font-size: 24px;
+  }
+}
+/*# sourceMappingURL=BlockInfo.module.css.map */

@@ -1,0 +1,238 @@
+@import './../../abstracts/variables.scss';
+@import './../../abstracts/mixins.scss';
+
+@font-face {
+   font-family: 'SF Pro Display';
+   src: url(./../../assets/fonts/SFProDisplay-Bold.woff);
+   font-weight: 700;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'SF Pro Display';
+   src: url(./../../assets/fonts/SFProDisplay-Medium.woff);
+   font-weight: 500;
+   font-style: normal;
+}
+
+a {
+   text-decoration: none;
+   color: $textColor;
+}
+
+
+
+.navigation {
+   padding-top: 50px;
+   @include text-edit ('SF Pro Display', 700, 1.25rem, 1.2);
+   @include flex-edit (space-between, center);
+   letter-spacing: 0em;
+   text-align: center;
+   position: relative;
+   z-index: 999;
+}
+
+.list {
+   @include flex-edit (space-between, center);
+}
+
+.listItem {
+   margin-right: 50px;
+   transition: all 0.3s ease;
+
+   &:hover {
+      transform: scaleX(1.2);
+      -webkit-transform: scaleX(1.2);
+      -moz-transform: scaleX(1.2);
+      -ms-transform: scaleX(1.2);
+      -o-transform: scaleX(1.2);
+   }
+}
+
+.listItem:last-child {
+   padding-right: 0;
+}
+
+.navigationRight {
+   margin-left: 148px;
+   @include flex-edit (normal, center);
+}
+
+.adress {
+   position: relative;
+   transition: all 0.3s ease;
+
+   &:hover {
+      transform: scaleX(1.1);
+   }
+}
+
+.adress::before {
+   content: "";
+   width: 28px;
+   height: 30px;
+   background: url('./../../assets/image/icons/location.svg') no-repeat;
+   position: absolute;
+   top: -9px;
+   left: -30px;
+}
+
+.icons {
+   padding-right: 15px;
+   @include flex-edit(normal, center);
+}
+
+.icon {
+   margin-right: 10px;
+}
+
+.icon:last-child {
+   padding-right: 0;
+   position: relative;
+}
+
+.icon:last-child::after {
+   content: "1";
+   width: 20px;
+   height: 20px;
+   display: block;
+   background-color: $accentColor;
+   border-radius: 50%;
+   position: absolute;
+   bottom: 0;
+   right: -15px;
+   @include text-edit ('SF Pro Display', 500, 0.625rem, 2);
+   letter-spacing: 0em;
+   text-align: center;
+   color: $whiteColor;
+
+}
+
+
+@media screen and (max-width:992px) {
+
+   .navigationRight {
+      display: none;
+   }
+
+   .navigation{
+      padding-top: 150px;
+      position: fixed;
+      top: 0;
+      left: 115%;
+      right: 0;
+      bottom:0;
+      transition: .5s;
+   }
+   .navigationActive{
+      padding-top: 150px;
+      @include text-edit ('SF Pro Display', 700, 1.25rem, 1.2);
+      flex-direction: column;
+      @include flex-edit (flex-start, center);
+      letter-spacing: 0em;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom:0;
+      background-color: #d4cfcf;
+      z-index: 999;
+      transition: .5s;
+   }
+
+   .icons {
+      margin-top: 70px;
+   }
+   .icon{
+      margin-right: 50px;
+      &:nth-child(3){
+         margin: 0;
+      }
+   }
+}
+
+@media screen and (max-width:576px){
+   .navigationActive{
+      font-size: 1rem;
+   }
+   .listItem{
+      margin-right: 25px;
+   }
+
+}
+@media screen and (max-width:420px){
+   .list{
+      
+      flex-direction: column;
+   }
+   .listItem{
+     margin: 20px 0 0 0;
+   }
+   
+}
+
+
+
+
+
+
+
+.burgerMenu {
+   position: fixed;
+   top: 34px;
+   left: 10px;
+   cursor: pointer;
+   display: none;
+   z-index: 9999;
+}
+// .burgerInner{
+//    transition: .9s;
+// }
+.burgerInnerActive ::before,
+.burgerInnerActive ::after{
+   content: "";
+   width: 35px;
+   height: 3px;
+   background-color: $textColor;
+   display: block;
+}
+.burgerInnerActive ::before{
+   transform: rotate(41deg);
+}
+.burgerInnerActive ::after{
+   transform: rotate(140deg);
+   top:2px;
+   left: 0;
+   position: absolute;
+}
+
+.burgerInner::before,
+.burgerInner::after {
+   content: "";
+   width: 35px;
+   height: 3px;
+   background-color: $textColor;
+   display: block;
+}
+
+.burgerInner::after {
+   margin-top: 10px;
+}
+
+.burgerInner span {
+   margin-top: 10px;
+
+   width: 35px;
+   height: 3px;
+
+   background-color: $textColor;
+
+   display: block;
+}
+
+@media screen and (max-width: 992px) {
+   .burgerMenu {
+      display: block;
+   }
+
+}
