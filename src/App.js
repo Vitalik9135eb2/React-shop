@@ -10,7 +10,7 @@ import Footer from './footer/Footer';
 
 function App() {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <div className={s.mainApp}>
                 <div className={s.container}>
                     <Header />
