@@ -17,6 +17,8 @@ function App() {
                     <Route path='/main' component={Main} />
                     <Route path='/catalog' component={Catalog} />
                     <Route path='/productCard' component={ProductCard} />
+
+                    
                     <Redirect from='/' to='/main' />
                 </div>
                 <Footer />
