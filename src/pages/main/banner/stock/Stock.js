@@ -1,25 +1,28 @@
 import React from "react";
-import s from './Stock.module.scss';
-import stock from "./../../../../assets/image/stock/stock-img.svg";
-import stockImgItem from "./../../../../assets/image/stock/stock-img-item.svg";
+import s from './_Stock.module.scss';
+import { NavLink } from "react-router-dom";
 
 
-function Stock() {
+
+function Stock(props) {
+
+
     return (
-        <a href="#" className={s.stock}>
-            <img className={s.stockImg} src={stock} alt="stock" />
+        <NavLink to="#" className={s.stock} id={props.stockBanerData.id}>
+            <span className={s.stockInfo}>Акция</span>
             <div className={s.stockPriceNormalWrapper}>
-                <span className={s.stockPrice}>190 000</span>
-                <span className={s.stockPriceNormal}> 225 000</span>
+                <span className={s.stockPrice}>{props.stockBanerData.price}</span>
+                <span className={s.stockPriceNormal}>{props.stockBanerData.priceBefore}</span>
             </div>
             <div className={s.stockImgItemWrapper}>
-                <img className={s.stockImgItem} src={stockImgItem} alt="item" />
-                <h2>Лодочный мотор Suzuki DF9.9BRS</h2>
+                <img className={s.stockImgItem} src={props.stockBanerData.img} alt="item" />
+                <h2>{props.stockBanerData.itemName}</h2>
             </div>
             <div className={s.stockTimeAction}>
-                Акция действует до <br/><span> 31.08.2020</span>
+                <span>Акция действует до</span>
+                <span className={s.stockDate}>{props.stockBanerData.stockData}</span>
             </div>
-        </a>
+        </NavLink>
     );
 }
 

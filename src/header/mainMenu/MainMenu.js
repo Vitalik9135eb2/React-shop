@@ -1,12 +1,11 @@
 
 import s from './_mainMenu.module.scss'
+import { NavLink } from "react-router-dom";
 
 
-function MainMenu() {
+function MainMenu(props) {
 
-   const vehicles = ["Квадроциклы", "Катера", "Гидроциклы", "Лодки", "Вездеходы", "Снегоходы", "Двигатели", "Запчасти"]
-
-   let products = vehicles.map(vehicle => (<li className={s.menuItem}><a className={s.menuLink} href="#">{vehicle}</a></li>))
+   let products = props.headerNavData.map(item => <li id={item.id} className={s.menuItem}><NavLink className={s.menuLink} to={item.path}>{item.text}</NavLink></li>)
 
    return (
       <div className={s.menu}>

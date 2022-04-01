@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 function CardDetails(props) {
     return (
 
-        <div className={s.cardDetails}>
+        <div className={s.cardDetails} id={props.id}>
             <h3 >{props.title}</h3>
             <img src={props.img} alt="#" />
             <div className={s.cardDetailsLink}><NavLink to={props.link}>Подробнее</NavLink></div>

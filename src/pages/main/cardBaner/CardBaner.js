@@ -15,12 +15,7 @@ function CardBaner() {
             </div>
             <p className={s.banerText}> CКИДКИ на все запчасти до 70%</p>
                 <button className={s.banerBtn}>Посмотреть Всё</button>
-            
-            
-           
-
-            
-
+    
         </div>
     );
 }

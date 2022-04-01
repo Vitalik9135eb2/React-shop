@@ -8,13 +8,16 @@ import Catalog from "./pages/catalog/Catalog";
 import ProductCard from "./pages/productCatalog/ProductCard";
 import Footer from './footer/Footer';
 
-function App() {
+
+function App(props) {
+    
     return (
         <BrowserRouter >
             <div className={s.mainApp}>
                 <div className={s.container}>
                     <Header />
-                    <Route path='/main' component={Main} />
+                    <Route path='/main' render={() => <Main cardDetailsData={props.cardDetailsData} 
+                        stockBanerData={props.stockBanerData}/>} />
                     <Route path='/catalog' component={Catalog} />
                     <Route path='/productCard' component={ProductCard} />
 

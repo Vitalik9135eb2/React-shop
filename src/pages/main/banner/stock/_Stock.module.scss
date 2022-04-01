@@ -36,6 +36,14 @@
         transform: scale(1.01);
     }
 }
+.stockInfo{
+    background-color: rgb(46, 55, 157);
+    color: #fff;
+    max-width: 100px;
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 5px 0;
+}
 
 .stockPrice {
     margin-right: 10px;
@@ -78,7 +86,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-top: -35px;
 }
 
 .stockPrice::after {
@@ -103,9 +110,9 @@
 }
 
 .stockTimeAction {
-    height: 112px;
+    max-height: 112px;
     width: 262px;
-
+    padding: 20px 0;
     margin-top: 10px;
 
     background-color: $baseColor;
@@ -115,7 +122,7 @@
 
     @include text-edit('SF Pro Display', 400, 1.125rem, 1.17);
 
-    & span {
+    .stockDate {
         @include text-edit('Barlow', 700, 1.125rem, 1.2);
         color: $accentColor;
     }

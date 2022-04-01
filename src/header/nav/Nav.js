@@ -7,7 +7,7 @@ import Logo from '../logo/Logo';
 
 
 
-function Nav() {
+function Nav(props) {
 
    const [isActive, setActive] = useState(false);
 
@@ -25,7 +25,6 @@ function Nav() {
       </div>
 
       <nav className={isActive ? s.navigationActive : s.navigation}>
-        
          <div  className={s.navigationLeft }>
             <ul className={s.list}>
                <li className={s.listItem}>

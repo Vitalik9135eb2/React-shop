@@ -9,9 +9,13 @@ import Slider from "./slider/Slider";
 
 
 function Goods(props) {
+
+
+
    return (
       <div className={s.goods}>
          <BlockHeader text="Популярные товары"/>
+
          <Slider/>
          {props.button &&
             <BtnShow text="Показать ещё" />

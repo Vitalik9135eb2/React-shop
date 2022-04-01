@@ -16,8 +16,6 @@ function BlockSearch() {
 
             </div>
 
-           
-
             <form className={s.blockForm}>
                 <Input type="text" placeholder="Введите марку"
                 
@@ -25,12 +23,7 @@ function BlockSearch() {
                 
                 <button className={s.Btn}>Искать</button>    
 
-                
-                
             </form>
-
-          
-        
 
         </div>
     );
