@@ -45,12 +45,11 @@ function BlockFilter() {
 
             </div>
             
-            <div className={s.availability, s.component}>
+            <div className={`${s.availability}, ${s.component}`}>
 
                 <input className={s.input} id="1" type="checkbox"  />
                 <label for="1" className={s.titleWrap}>
                     <h4 className={s.title}>Наличие</h4>
-                
                 </label>
                 
                 <div className={s.checkboxWrap}>

@@ -10,15 +10,19 @@ import Footer from './footer/Footer';
 
 
 function App(props) {
-    
+
     return (
         <BrowserRouter >
             <div className={s.mainApp}>
                 <div className={s.container}>
-                    <Header />
-                    <Route path='/main' render={() => <Main cardDetailsData={props.cardDetailsData} 
-                        stockBanerData={props.stockBanerData}/>} />
-                    <Route path='/catalog' component={Catalog} />
+                    <Header headerNavData={props.state.headerNavData} />
+
+                    <Route path='/main' render={() => <Main cardDetailsData={props.state.cardDetailsData} 
+                        stockBanerData={props.state.stockBanerData}/>} />
+
+                    <Route path='/catalog' render={() =>  <Catalog cardCAtalogData={props.state.cardCAtalogData}/>} />
+
+
                     <Route path='/productCard' component={ProductCard} />
 
                     
@@ -28,6 +32,8 @@ function App(props) {
             </div>
         </BrowserRouter>
     );
+
+
 }
 
 export default App;
