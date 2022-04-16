@@ -5,8 +5,10 @@ import Header from './header/Header';
 
 import Main from "./pages/main/Main";
 import Catalog from "./pages/catalog/Catalog";
+import CatalogContainer from "./pages/catalog/CatalogContainer";
 import ProductCard from "./pages/productCatalog/ProductCard";
 import Footer from './footer/Footer';
+import MainContainer from './pages/main/MainContainer';
 
 
 function App(props) {
@@ -15,17 +17,21 @@ function App(props) {
         <BrowserRouter >
             <div className={s.mainApp}>
                 <div className={s.container}>
-                    <Header headerNavData={props.state.headerNavData} />
+                    <Header store={props.store} />
 
-                    <Route path='/main' render={() => <Main cardDetailsData={props.state.cardDetailsData} 
-                        stockBanerData={props.state.stockBanerData}/>} />
+                    {/* <Route path='/main' render={() => <Main cardDetailsData={props.state.cardDetailsData}
+                        stockBanerData={props.state.stockBanerData.stockBanerData} />} /> */}
 
-                    <Route path='/catalog' render={() =>  <Catalog cardCAtalogData={props.state.cardCAtalogData}/>} />
+                    <Route path='/main' render={() => <MainContainer store={props.store} />} />
+
+                    {/* <Route path='/catalog' render={() => <CatalogContainer cardCAtalogData={props.state.cardCAtalogData.cardCAtalogData} />} /> */}
+
+                    <Route path='/catalog' render={() => <CatalogContainer store={props.store}/>} />
 
 
                     <Route path='/productCard' component={ProductCard} />
 
-                    
+
                     <Redirect from='/' to='/main' />
                 </div>
                 <Footer />

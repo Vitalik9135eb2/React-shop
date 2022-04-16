@@ -1,6 +1,6 @@
 import React from "react";
 
-import s from './Catalog.module.scss';
+import s from './_Catalog.module.scss';
 import BlockInfo from "./../../components/blockInfo/BlockInfo";
 import BlockFilter from "./../../components/blokFilter/BlockFilter";
 import CardCatalog from "./cardCatalog/CardCatalog";
@@ -9,8 +9,8 @@ import Pagination from "./pagination/Pagination";
 
 
 function Catalog(props) {
- 
-    let cardCAtalogItem = props.cardCAtalogData.map( item => {
+
+    let cardCAtalogItem = props.state.cardCAtalogData.cardCAtalogData.map( item => {
         return(
             <CardCatalog title={item.title} img={item.img} cost={item.cost} />
         )

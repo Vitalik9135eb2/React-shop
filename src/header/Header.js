@@ -1,4 +1,4 @@
-import MainMenu from "./mainMenu/MainMenu";
+import HeaderMenuContainer from "./mainMenu/HeaderMenuContainer";
 import Nav from "./nav/Nav";
 import s from './_header.module.scss';
 
@@ -11,7 +11,7 @@ function Header(props) {
   return (
     <header className={s.header}>
       <Nav />
-      <MainMenu  headerNavData={ props.headerNavData} />
+      <HeaderMenuContainer store={ props.store}/>
 
     </header>
   );

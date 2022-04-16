@@ -12,8 +12,7 @@ import Banner from "./banner/Banner";
 
 function Main(props) {
 
-
-    let cardDetailsItem = props.cardDetailsData.map( item => {
+    let cardDetailsItem = props.state.cardDetailsData.cardDetailsData.map( item => {
         return(
             <CardDetails id={item.id} title={item.title} img={item.img} link={item.link} />
         )
@@ -22,7 +21,7 @@ function Main(props) {
     return (
 
         <div className={s.main}>
-            <Banner stockBanerData={props.stockBanerData} />
+            <Banner stockBanerData={props.state.stockBanerData.stockBanerData} />
             <BlockSearch />
             <div className={s.cardDetailsInner}>
                 {cardDetailsItem}

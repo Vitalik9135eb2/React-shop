@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 
 function MainMenu(props) {
 
-   let products = props.headerNavData.map(item => <li id={item.id} className={s.menuItem}><NavLink className={s.menuLink} to={item.path}>{item.text}</NavLink></li>)
+   let products = props.state.map(item => <li id={item.id} className={s.menuItem}><NavLink className={s.menuLink} to={item.path}>{item.text}</NavLink></li>)
 
    return (
       <div className={s.menu}>
