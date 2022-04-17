@@ -1,18 +1,17 @@
 import React from "react";
+import { connect } from "react-redux";
 import Catalog from "./Catalog";
 
 
+let mapStateToProps = (state) => {
 
-function CatalogContainer(props) {
-
-    let state = props.store.getState()
-
-    return (
-
-    <Catalog state={state}/>
-
-    )
-        
+    return{
+        state: state
+    }
 }
+
+const CatalogContainer = connect(mapStateToProps)(Catalog)
+
+
 
 export default CatalogContainer;

@@ -17,16 +17,16 @@ function App(props) {
         <BrowserRouter >
             <div className={s.mainApp}>
                 <div className={s.container}>
-                    <Header store={props.store} />
+                    <Header />
 
                     {/* <Route path='/main' render={() => <Main cardDetailsData={props.state.cardDetailsData}
                         stockBanerData={props.state.stockBanerData.stockBanerData} />} /> */}
 
-                    <Route path='/main' render={() => <MainContainer store={props.store} />} />
+                    <Route path='/main' render={() => <MainContainer />} />
 
-                    {/* <Route path='/catalog' render={() => <CatalogContainer cardCAtalogData={props.state.cardCAtalogData.cardCAtalogData} />} /> */}
+                    <Route path='/catalog' render={() => <CatalogContainer />} />
 
-                    <Route path='/catalog' render={() => <CatalogContainer store={props.store}/>} />
+                    {/* <Route path='/catalog' render={() => <CatalogContainer store={props.store}/>} /> */}
 
 
                     <Route path='/productCard' component={ProductCard} />

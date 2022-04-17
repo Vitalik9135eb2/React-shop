@@ -11,7 +11,8 @@ function Header(props) {
   return (
     <header className={s.header}>
       <Nav />
-      <HeaderMenuContainer store={ props.store}/>
+      
+      <HeaderMenuContainer/>
 
     </header>
   );

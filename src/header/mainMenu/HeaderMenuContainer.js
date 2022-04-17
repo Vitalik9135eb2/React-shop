@@ -1,17 +1,16 @@
 
+import { connect } from 'react-redux';
 import MainMenu from './MainMenu';
 
 
-function HeaderMenuContainer (props) {
 
-// let state = props.headerNavData.headerNavData
-let state = props.store.getState().headerNavData.headerNavData
-
-    return (
-      
-      <MainMenu state={state}/>
-      
-    );
+let mapStateToProps = (state) => {
+  return{
+    state: state.headerNavData.headerNavData,
+  }
 }
+
+
+const HeaderMenuContainer = connect (mapStateToProps) (MainMenu)
 
 export default HeaderMenuContainer;
