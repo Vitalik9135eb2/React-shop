@@ -1,5 +1,5 @@
 import React from "react";
-import s from './CardCatalog.module.scss';
+import s from './_CardCatalog.module.scss';
 import favoritesImg from "./../../../assets/image/cardCatalog/favoritesImg.svg";
 import saleImg from "./../../../assets/image/cardCatalog/saleImg.svg";
 // import cartImgBuy from "./../../../assets/image/cardCatalog/cartImgBuy.png";
@@ -8,10 +8,13 @@ import {NavLink} from "react-router-dom";
 
 
 function CardCatalog(props) {
+    
+    let notification = props.type === "none" ? s.notificationNone : s.notification
 
     return (
         <div className={s.cardCatalog}>
-            <img src={saleImg} alt="sale" />
+            {/* <img src={saleImg} alt="sale" /> */}
+            <span className={notification}>{props.type}</span>
             <button className={s.buttonFavorit}><img src={favoritesImg} alt="favorites " /></button>
             <div className={s.cardCatalogInner}>
                 <img src={props.img} alt="item" />

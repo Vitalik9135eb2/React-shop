@@ -7,6 +7,7 @@ import PointerPage from "./../../components/pointerPage/PointerPage";
 import Tabs from "./tabs/Tabs";
 import Pickup from "./pickup/Pickup";
 import Goods from "./../../components/goods/Goods";
+import CardProductContainer from "../../components/cardProduct/CardProductContainer";
 
 
 
@@ -16,7 +17,7 @@ function ProductCard() {
         <div >
             <PointerPage />
             
-            <CardProduct />
+            <CardProductContainer />
             <div>
           <Tabs />
           <Pickup />

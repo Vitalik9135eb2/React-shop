@@ -96,3 +96,20 @@
 
   transition: all 0.3s ease;
 }
+
+.notification{
+  background-color: blue;
+  width: 70px;
+  display: block;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+.notificationNone{
+  opacity: 0;
+  width: 70px;
+  display: block;
+  padding: 10px 15px;
+  font-size: 16px;
+}

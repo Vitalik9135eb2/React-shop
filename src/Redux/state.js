@@ -90,6 +90,29 @@ let state = {
     ],
 
 
+    global:[
+        // {
+        //     id:1,
+        //     popular: 1,
+        //     nameProduct: "Гидроцикл",
+        //     brand: "BPP",
+        //     modal: "Sea doo GTI 155ph SE Long Blue Metallic",
+        //     country: "Canada",
+        //     maxSpeed: "100",
+        //     power: "155",
+        //     availability: true,
+        //     engineType: "petrol",
+        //     releaseYear: "2018",
+        //     type: "new",
+        //     price: {
+        //         first: "1 200 476",
+        //         after: "1 110 475"
+        //     }
+        
+        // }
+    ]
+
+
 
 }
 

@@ -29,7 +29,9 @@ function App(props) {
                     {/* <Route path='/catalog' render={() => <CatalogContainer store={props.store}/>} /> */}
 
 
-                    <Route path='/productCard' component={ProductCard} />
+                    {/* <Route path='/productCard' component={ProductCard} /> */}
+
+                    <Route path='/productCard'  render={() => <ProductCard/>}/>
 
 
                     <Redirect from='/' to='/main' />
